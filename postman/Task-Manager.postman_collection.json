@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Task Manager API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/health"
+      }
+    },
+    {
+      "name": "List tasks",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/tasks"
+      }
+    },
+    {
+      "name": "Create task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"Preparar entrega\",\"description\":\"Completar API\"}"
+        },
+        "url": "http://localhost:3000/api/tasks"
+      }
+    },
+    {
+      "name": "Get task 1",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/tasks/1"
+      }
+    },
+    {
+      "name": "Update task 1",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"completed\":true}"
+        },
+        "url": "http://localhost:3000/api/tasks/1"
+      }
+    },
+    {
+      "name": "Delete task 1",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/api/tasks/1"
+      }
+    }
+  ]
+}
